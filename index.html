@@ -6,7 +6,7 @@
         content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>Activity Grammars for Temporal Action Segmentation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -52,7 +52,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
+      <a class="navbar-item" href="https://cvlab.postech.ac.kr/lab/research.php">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
@@ -63,17 +63,8 @@
           More Research
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
+          <a class="navbar-item" href="https://cvlab.postech.ac.kr/research/FUTR/">
+            FUTR
           </a>
         </div>
       </div>
@@ -88,32 +79,26 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">Activity Grammars for Temporal Action Segmentation</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="https://gongda0e.github.io/">Dayoung Gong</a><sup>1*</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="https://jsleeo424.github.io">Joonseok Lee</a><sup>1*</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a href="https://hesedjds.github.io">Deunsol Jung</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              <a href="https://suhakwak.github.io">Suha Kwak</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="https://cvlab.postech.ac.kr/~mcho">Minsu Cho</a><sup>1</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>Pohang University of Science and Technology (POSTECH)</span><br>
+            <span class="author-block"><sup>*</sup>Equal Contribution</span>
           </div>
 
           <div class="column has-text-centered">
@@ -137,19 +122,9 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/gongda0e/neurips23_supp"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -178,16 +153,59 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
+        <img src="./static/images/pipeline35.jpg"
+                type="images/jpg" />
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+        Overall pipeline of the proposed method. <br><span class="dnerf">KARI</span> induces an activity grammar which BEP utilized to parses neural predictions.
       </h2>
     </div>
+  </div>
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Sequence prediction on temporal data requires the ability to understand compositional structures of multi-level 
+            semantics beyond individual and contextual properties. The task of temporal action segmentation, which aims at 
+            translating an untrimmed activity video into a sequence of action segments, remains challenging for this reason.
+          </p>
+          <p>
+            This paper addresses the problem by introducing an effective activity grammar to guide neural predictions for 
+            temporal action segmentation. We propose a novel grammar induction algorithm that extracts a powerful context-free
+            grammar from action sequence data. We also develop an efficient generalized parser that transforms frame-level 
+            probability distributions into a reliable sequence of actions according to the induced grammar with recursive rules. 
+            Our approach can be combined with any neural network for temporal action segmentation to enhance the sequence 
+            prediction and discover its compositional structure.
+          </p>
+          <p>
+            Experimental results demonstrate that our method significantly improves temporal action
+            segmentation in terms of both performance and interpretability on two standard
+            benchmarks, Breakfast and 50 Salads.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+
+<section class="asdf">
+  <div class="container is-max-desktop">
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
   </div>
 </section>
 
@@ -246,60 +264,6 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
   </div>
 </section>
 
@@ -416,22 +380,28 @@
         <h2 class="title is-3">Related Links</h2>
 
         <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
+          <ul>
+            <li>S. Qi, B. Jia, and S.-C. Zhu. <a href="https://arxiv.org/pdf/1806.03497.pdf">Generalized earley parser</a>: Bridging symbolic grammars and
+              sequence data for future prediction. In Proc. International Conference on Machine Learning
+              (ICML), pages 4171–4179. PMLR, 2018.</li><br>
+            <li>Z. Solan, D. Horn, E. Ruppin, and S. Edelman. <a href="https://www.pnas.org/doi/10.1073/pnas.0409746102">
+              Unsupervised learning of natural languages.</a>
+              Proceedings of the National Academy of Sciences, 102(33):11629–11634, 2005.</li><br>
+            <li>J. Earley. <a href="https://dl.acm.org/doi/pdf/10.1145/362007.362035">An efficient context-free parsing algorithm.</a> 
+              Communications of the ACM, 13(2):94–102, 1970.</li><br>
+            <li>F. Yi, H. Wen, and T. Jiang. <a href="https://arxiv.org/pdf/2110.08568.pdf">
+              Asformer: Transformer for action segmentation.</a> In Proc. British
+              Machine Vision Conference (BMVC), 2021.</li><br>
+            <li>Y. A. Farha and J. Gall. <a href="https://arxiv.org/pdf/1903.01945.pdf">Ms-tcn: Multi-stage temporal convolutional network for action
+              segmentation.</a> In Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR),
+              pages 3575–3584, 2019.</li><br>
+            <li>H. Kuehne, A. Arslan, and T. Serre. <a href="https://ieeexplore.ieee.org/document/6909500">The language of actions: Recovering the syntax and
+              semantics of goal-directed human activities.</a> In Proc. IEEE Conference on Computer Vision and
+              Pattern Recognition (CVPR), pages 780–787, 2014.</li><br>
+            <li>S. Stein and S. J. McKenna. <a href="https://dl.acm.org/doi/10.1145/2493432.2493482">Combining embedded accelerometers with computer vision for
+              recognizing food preparation activities.</a> In Proceedings of the 2013 ACM international joint
+              conference on Pervasive and ubiquitous computing, pages 729–738, 2013.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -444,11 +414,12 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@inproceedings{gong2023activity,
+      title={Activity Grammars for Temporal Action Segmentation},
+      author={Dayoung Gong and Joonseok Lee and Deunsol Jung and Suha Kwak and Minsu Cho},
+      booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+      year={2023},
+      url={https://openreview.net/forum?id=oOXZ5JEjPb}
 }</code></pre>
   </div>
 </section>
@@ -474,11 +445,8 @@
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
           <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            Website adpated from the following <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a>.
           </p>
         </div>
       </div>
